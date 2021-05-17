@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shopping-app": {
+    "shopping-recipe-web-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shopping-app",
+            "outputPath": "dist/shopping-recipe-web-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "shopping-app:build"
+            "browserTarget": "shopping-recipe-web-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "shopping-app:build:production"
+              "browserTarget": "shopping-recipe-web-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "shopping-app:build"
+            "browserTarget": "shopping-recipe-web-app:build"
           }
         },
         "test": {
@@ -109,16 +110,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "shopping-app:serve"
+            "devServerTarget": "shopping-recipe-web-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "shopping-app:serve:production"
+              "devServerTarget": "shopping-recipe-web-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "shopping-app"
+  "defaultProject": "shopping-recipe-web-app"
 }
