@@ -1,7 +1,8 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Ingredient } from '../shared/ingredient.model';
-
 import { Recipe } from './recipe.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class RecipeService {
       [new Ingredient('caramel', 13), new Ingredient('sweeteners', 90)]),
   ];
 
-  recipeSelected = new EventEmitter<Recipe>();
+
 
   getRecipes() {
     return this.recipes.slice();
