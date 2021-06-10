@@ -1,0 +1,10 @@
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.border-class {
+  border: 2px rgb(223, 221, 221) solid;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 10px;
+}
