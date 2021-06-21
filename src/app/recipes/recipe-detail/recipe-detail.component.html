@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
         <img
-            [src]="chosenRecipe.imagePath"
+            [src]="chosenRecipe?.imagePath"
             alt=""
             class="img-responsive"
         >
@@ -12,7 +12,7 @@
     appDropdown
 >
     <div class="col-xs-12">
-        <h2>{{chosenRecipe.name}}</h2>
+        <h2>{{chosenRecipe?.name}}</h2>
     </div>
 </div>
 <div class="row">

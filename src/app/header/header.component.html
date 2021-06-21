@@ -36,8 +36,14 @@
                         role="button"
                     >Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a style="cursor: pointer;">Save data</a></li>
-                        <li><a style="cursor: pointer;">Fetch data</a></li>
+                        <li><a
+                                style="cursor: pointer;"
+                                (click)="onSaveData()"
+                            >Save Recipes</a></li>
+                        <li><a
+                                style="cursor: pointer;"
+                                (click)="onFetchData()"
+                            >Fetch Recipes</a></li>
                     </ul>
                 </li>
             </ul>
