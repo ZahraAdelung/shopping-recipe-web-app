@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
-import { map, tap } from 'rxjs/operators'
+import { map, tap } from 'rxjs/operators';
+import { myFirebaseUrl } from './backend';
 
 @Injectable({
     providedIn: 'root'
@@ -10,7 +11,7 @@ import { map, tap } from 'rxjs/operators'
 export class DataStorageService {
 
     //Add your firebbase url with .json end point:
-    private firebaseUrl = '';
+    private firebaseUrl = myFirebaseUrl;
 
     constructor(private http: HttpClient, private recipeService: RecipeService) { }
 
