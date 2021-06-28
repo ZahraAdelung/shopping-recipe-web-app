@@ -1,6 +1,14 @@
+# Important note
+
+In order to run this project on your device without any problem, you need to somehow create or use a server where you save and fetch recipes from. If you would like to use your firebase url as your backend like I did, you just need to create a file with the name 'backend.ts' inside the shared folder and in this file add the expression bellow then write your firebase link with '.json' end-point inside the single qoutation mark:
+
+export const myFirebaseUrl = '';
+
+
 # ShoppingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+This project is an E-commerce web application where you can create and optimize your own recipes and add the ingredients in to your shopping list, edit and delete it all in one place.
+It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
 
