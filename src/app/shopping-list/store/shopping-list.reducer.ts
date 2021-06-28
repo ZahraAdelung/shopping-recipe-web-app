@@ -13,11 +13,7 @@ export interface AppState {
 }
 
 const initialState: State = {
-    items: [
-        new Ingredient('Orane', 3),
-        new Ingredient('Apple', 5),
-        new Ingredient('butter', 150),
-    ],
+    items: [],
     editedItem: null,
     editedItemIndex: -1,
 };
@@ -40,25 +36,29 @@ export function shoppingListReducer(
             }
 
         case ShoppingListActions.UPDATE_ITEM:
-            const item = state.items[action.payload.index];
+            const item = state.items[state.editedItemIndex];
             const updatedItem = {
                 ...item,
-                ...action.payload.newItem,
+                ...action.payload,
             };
             const updatedItems = [...state.items];
-            updatedItems[action.payload.index] = updatedItem;
+            updatedItems[state.editedItemIndex] = updatedItem;
 
             return {
                 ...state,
                 items: updatedItems,
+                editedItem: null,
+                editedItemIndex: -1,
             };
 
         case ShoppingListActions.DELETE_ITEM:
             const newItemList = [...state.items];
-            newItemList.splice(action.payload, 1);
+            newItemList.splice(state.editedItemIndex, 1);
             return {
                 ...state,
                 items: newItemList,
+                editedItem: null,
+                editedItemIndex: -1,
             };
 
         case ShoppingListActions.START_EDIT:
